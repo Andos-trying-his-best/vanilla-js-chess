@@ -1,0 +1,112 @@
+html, body {
+    background-color: black;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.content {
+    background-color: white;
+    height: 24rem;
+    width: 24rem;
+    border: .5rem solid rgb(32, 32, 32);
+    font-size: 1.8rem;
+
+    display: flex;
+    flex-direction: column;
+}
+.row1, .row2, .row3, .row4,
+.row5, .row6, .row7, .row8 {
+    display: flex;
+    flex: 1;
+}
+.square {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row1 .square:nth-child(odd),
+.row2 .square:nth-child(even),
+.row3 .square:nth-child(odd),
+.row4 .square:nth-child(even),
+.row5 .square:nth-child(odd),
+.row6 .square:nth-child(even),
+.row7 .square:nth-child(odd),
+.row8 .square:nth-child(even) {
+    background-color: #4c5b6a;
+}
+.row1 .square:nth-child(even),
+.row2 .square:nth-child(odd),
+.row3 .square:nth-child(even),
+.row4 .square:nth-child(odd),
+.row5 .square:nth-child(even),
+.row6 .square:nth-child(odd),
+.row7 .square:nth-child(even),
+.row8 .square:nth-child(odd) {
+    background-color: #969fa8;
+}
+.row1, .row2 { color: black; }
+.row7, .row8 { color: white; }
+
+/*
+pk,.pawnn{
+    background-color: #969fa8;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    transition: transform 0.5s ease;
+}
+pj,.pawn{
+    background-color: #4c5b6a;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    transition: transform 0.5s ease;
+}
+.row, .rowblack, .rowwhite, .pawn, .pawnn{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.rowblack i, .pawnn i, .pawn i{
+    color: rgb(0, 0, 0);
+    font-size: 1.8rem;
+}
+.rowwhite i,.pawn i, .pawnn i{
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.288);
+    font-size: 1.8rem;
+}
+
+/*
+            <div class="row1">
+                
+            </div>
+
+                        <div class="rowwhite">
+                <div class="pawn"><i class="fa-solid fa-chess-pawn"></i></div>
+                <div class="pawnn"><i class="fa-solid fa-chess-pawn"></i></div>
+                <div class="pawn"><i class="fa-solid fa-chess-pawn"></i></div>
+                <div class="pawnn"><i class="fa-solid fa-chess-pawn"></i></div>
+                <div class="pawn"><i class="fa-solid fa-chess-pawn"></i></div>
+                <div class="pawnn"><i class="fa-solid fa-chess-pawn"></i></div>
+                <div class="pawn"><i class="fa-solid fa-chess-pawn"></i></div>
+                <div class="pawnn"><i class="fa-solid fa-chess-pawn"></i></div>
+                <div class="pawn"><i class="fa-solid fa-chess-pawn"></i></div>
+            </div>
+            <div class="rowwhite">
+                <pk><i class="fa-solid fa-chess-rook"></i></pk>
+                <pj><i class="fa-solid fa-chess-knight"></i></pj>
+                <pk><i class="fa-solid fa-chess-bishop"></i></pk>
+                <pj><i class="fa-solid fa-chess-queen"></i></pj>
+                <pk><i class="fa-solid fa-chess-king"></i></pk>
+                <pj><i class="fa-solid fa-chess-bishop"></i></pj>
+                <pk><i class="fa-solid fa-chess-knight"></i></pk>
+                <pj><i class="fa-solid fa-chess-rook"></i></pj>
+            </div>
